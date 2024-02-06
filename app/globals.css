@@ -20,3 +20,18 @@ progress::-webkit-progress-value {
     @apply !capitalize;
   }
 }
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 1.5s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 3.75s;
+  }
+  .animation-delay-6000 {
+    animation-delay: 2.2s;
+  }
+  .animation-delay-8000 {
+    animation-delay: 1s;
+  }
+}

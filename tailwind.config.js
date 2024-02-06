@@ -7,23 +7,41 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // Define custom colors
       colors: {
         "custom-blue": "#1cdaff",
         "custom-purple": "#aa81f3",
         "custom-pink": "#f54ea2",
       },
+      // Define custom background images
       backgroundImage: {
         gradient:
           "linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)",
       },
+      // Define animations
       animation: {
+        blob: "blob 5s infinite",
         opacity: "opacity 0.25s ease-in-out",
         appearFromRight: "appearFromRight 300ms ease-in-out",
         wiggle: "wiggle 1.5s ease-in-out infinite",
         popup: "popup 0.25s ease-in-out",
         shimmer: "shimmer 3s ease-out infinite alternate",
       },
+      // Define keyframes for animations
       keyframes: {
+        blob: {
+          "0%": { transform: "translate(0px, 0px) scale(1)" },
+          "10%": { transform: "translate(30px, -30px) scale(1.1)" },
+          "20%": { transform: "translate(60px, -60px) scale(1.2)" },
+          "30%": { transform: "translate(90px, -90px) scale(1.3)" },
+          "40%": { transform: "translate(120px, -120px) scale(1.4)" },
+          "50%": { transform: "translate(150px, -150px) scale(1.5)" },
+          "60%": { transform: "translate(120px, -120px) scale(1.4)" },
+          "70%": { transform: "translate(90px, -90px) scale(1.3)" },
+          "80%": { transform: "translate(60px, -60px) scale(1.2)" },
+          "90%": { transform: "translate(30px, -30px) scale(1.1)" },
+          "100%": { transform: "translate(0px, 0px) scale(1)" },
+        },
         opacity: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
@@ -33,21 +51,11 @@ module.exports = {
           "100%": { opacity: 1, transform: "translate(0);" },
         },
         wiggle: {
-          "0%, 20%, 80%, 100%": {
-            transform: "rotate(0deg)",
-          },
-          "30%, 60%": {
-            transform: "rotate(-2deg)",
-          },
-          "40%, 70%": {
-            transform: "rotate(2deg)",
-          },
-          "45%": {
-            transform: "rotate(-4deg)",
-          },
-          "55%": {
-            transform: "rotate(4deg)",
-          },
+          "0%, 20%, 80%, 100%": { transform: "rotate(0deg)" },
+          "30%, 60%": { transform: "rotate(-2deg)" },
+          "40%, 70%": { transform: "rotate(2deg)" },
+          "45%": { transform: "rotate(-4deg)" },
+          "55%": { transform: "rotate(4deg)" },
         },
         popup: {
           "0%": { transform: "scale(0.8)", opacity: 0.8 },
@@ -64,10 +72,6 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    // Light & dark themes are added by default (it switches automatically based on OS settings)
-    // You can add another theme among the list of 30+
-    // Add "data-theme='theme_name" to any HTML tag to enable the 'theme_name' theme.
-    // https://daisyui.com/
     themes: ["light", "dark"],
   },
 };

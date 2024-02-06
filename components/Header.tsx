@@ -62,7 +62,8 @@ const Header = () => {
               width={32}
               height={32}
             />
-            <span className="font-extrabold text-lg text-custom-purple">
+            {/* gradient text super cool bg-gradient-to-r from-custom-pink via-custom-purple to-custom-blue inline-block text-transparent bg-clip-text*/}
+            <span className="font-extrabold text-lg text-gray-400">
               {config.appName}
             </span>
           </Link>
@@ -81,7 +82,7 @@ const Header = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6 text-white"
+              className="w-6 h-6 text-custom-blue"
             >
               <path
                 strokeLinecap="round"
@@ -93,7 +94,7 @@ const Header = () => {
         </div>
 
         {/* Your links on large screens */}
-        <div className="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center text-custom-purple">
+        <div className="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center text-gray-400">
           {links.map((link) => (
             <Link
               href={link.href}
