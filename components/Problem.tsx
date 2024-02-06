@@ -1,4 +1,7 @@
 import harvard from "app/logo-harvard.png";
+import stride from "app/stride-logo.png";
+import mdia from "app/mdia-logo.png";
+import canutillo from "app/canutillo-isd.png";
 import Image from "next/image";
 
 const Arrow = ({ extraStyle }: { extraStyle: string }) => {
@@ -44,20 +47,85 @@ const Step = ({ emoji, text }: { emoji: string; text: string }) => {
 // - Features: "ShipFast has user auth, Stripe, emails all set up for you"
 const Problem = () => {
   return (
-    <section className="bg-neutral text-neutral-content">
+    <section className="bg-neutral text-neutral-content relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 py-16 md:py-32 text-center">
-        <h2 className="max-w-3xl mx-auto font-extrabold text-4xl md:text-5xl tracking-tight mb-6 md:mb-8">
+        <h2 className="max-w-3xl mx-auto font-extrabold text-6xl md:text-4xl tracking-tight mb-6 md:mb-8">
           AI should be helpful, not complicated.
         </h2>
-        <p className="max-w-xl mx-auto text-lg opacity-90 leading-relaxed mb-12 md:mb-20">
-          Purpose built for teachers by experts who have worked with
+        <p className="max-w-xl mx-auto text-sm opacity-90 leading-relaxed mb-12 md:mb-20">
+          We brought together experts who have helped districts, top
+          institutions, and national governments learn about AI and build policy
+          to make it simple for you.
         </p>
 
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-6">
-          <Image src={harvard} alt="Image 1" className="w-48 h-auto" />
-          <Image src={harvard} alt="Image 1" className="w-48 h-auto" />
-          <Image src={harvard} alt="Image 1" className="w-48 h-auto" />
-          <Image src={harvard} alt="Image 1" className="w-48 h-auto" />
+        <div className="animate-infinite-scroll flex">
+          <div className="animate-infinite-scroll flex space-x-40">
+            <Image
+              src={harvard}
+              alt="Image 1"
+              className="w-48 max-h-12 py-20"
+            />
+            <Image
+              src={stride}
+              alt="Image 2"
+              className="w-48 max-h-20 -mt-13"
+            />
+            <Image src={mdia} alt="Image 3" className="w-48 max-h-10" />
+            <Image
+              src={canutillo}
+              alt="Image 4"
+              className="w-48 max-h-20 -mt-5"
+            />
+            {/* Duplicate images */}
+            <Image src={harvard} alt="Image 1" className="w-48 max-h-12" />
+            <Image
+              src={stride}
+              alt="Image 2"
+              className="w-48 max-h-20 -mt-13"
+            />
+            <Image src={mdia} alt="Image 3" className="w-48 max-h-10" />
+            <Image
+              src={canutillo}
+              alt="Image 4"
+              className="w-48 max-h-20 -mt-5"
+            />
+            <Image src={harvard} alt="Image 1" className="w-48 max-h-12" />
+            <Image
+              src={stride}
+              alt="Image 2"
+              className="w-48 max-h-20 -mt-13"
+            />
+            <Image src={mdia} alt="Image 3" className="w-48 max-h-10" />
+            <Image
+              src={canutillo}
+              alt="Image 4"
+              className="w-48 max-h-20 -mt-5"
+            />
+            <Image src={harvard} alt="Image 1" className="w-48 max-h-12" />
+            <Image
+              src={stride}
+              alt="Image 2"
+              className="w-48 max-h-20 -mt-13"
+            />
+            <Image src={mdia} alt="Image 3" className="w-48 max-h-10" />
+            <Image
+              src={canutillo}
+              alt="Image 4"
+              className="w-48 max-h-20 -mt-5"
+            />
+            <Image src={harvard} alt="Image 1" className="w-48 max-h-12" />
+            <Image
+              src={stride}
+              alt="Image 2"
+              className="w-48 max-h-20 -mt-13"
+            />
+            <Image src={mdia} alt="Image 3" className="w-48 max-h-10" />
+            <Image
+              src={canutillo}
+              alt="Image 4"
+              className="w-48 max-h-20 -mt-5"
+            />
+          </div>
         </div>
       </div>
     </section>

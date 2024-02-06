@@ -7,18 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // Define custom colors
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
       colors: {
         "custom-blue": "#1cdaff",
         "custom-purple": "#aa81f3",
         "custom-pink": "#f54ea2",
       },
-      // Define custom background images
       backgroundImage: {
         gradient:
           "linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)",
       },
-      // Define animations
       animation: {
         blob: "blob 5s infinite",
         opacity: "opacity 0.25s ease-in-out",
@@ -26,8 +26,8 @@ module.exports = {
         wiggle: "wiggle 1.5s ease-in-out infinite",
         popup: "popup 0.25s ease-in-out",
         shimmer: "shimmer 3s ease-out infinite alternate",
+        "infinite-scroll": "infinite-scroll 120s linear infinite",
       },
-      // Define keyframes for animations
       keyframes: {
         blob: {
           "0%": { transform: "translate(0px, 0px) scale(1)" },
@@ -66,6 +66,10 @@ module.exports = {
           "0%": { backgroundPosition: "0 50%" },
           "50%": { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },
+        },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
         },
       },
     },
