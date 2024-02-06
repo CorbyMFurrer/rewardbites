@@ -33,6 +33,7 @@ const ButtonSignin = ({
     return (
       <Link
         href={config.auth.callbackUrl}
+        style={{ backgroundColor: "#aa81f3" }}
         className={`btn ${extraStyle ? extraStyle : ""}`}
       >
         {user?.user_metadata?.avatar_url ? (
@@ -57,6 +58,7 @@ const ButtonSignin = ({
   return (
     <Link
       className={`btn ${extraStyle ? extraStyle : ""}`}
+      style={{ backgroundColor: "#aa81f3" }}
       href={config.auth.loginUrl}
     >
       {text}
