@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute top-80 right-50 w-72 h-72 bg-custom-blue rounded-full mt-20 mix-blend-multiply filter blur-2xl animate-blob animation-delay-6000"></div>
       <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
         <h1 className="font-extrabold text-3xl lg:text-6xl tracking-tight md:-mb-4 text-custom-blue">
-          Welcome To The Future of Education
+          AI Literacy For The Future of Education
         </h1>
         <button className="btn btn-primary btn-wide bg-custom-blue text-black">
           Start Learning Today

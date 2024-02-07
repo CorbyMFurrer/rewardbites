@@ -13,22 +13,30 @@ interface FAQItemProps {
 
 const faqList: FAQItemProps[] = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
+    question: "Can I rewatch videos?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        {" "}
+        Yes! You can rewatch our trainging modules on demand.{" "}
+      </div>
+    ),
   },
   {
-    question: "Can I get a refund?",
+    question: "How much do I need to know before starting?",
     answer: (
       <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
+        We expect absolutely no prior knowledge of AI or AI processes. We will
+        take you from zero to hero!
       </p>
     ),
   },
   {
-    question: "I have another question",
+    question: "Are templates included?",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <div className="space-y-2 leading-relaxed">
+        Every video comes with a data package, including prompts used in each
+        video and material that allows you to follow along.
+      </div>
     ),
   },
 ];
@@ -95,11 +103,13 @@ const FaqItem = ({ item }: { item: FAQItemProps }) => {
 
 const FAQ = () => {
   return (
-    <section className="bg-base-200" id="faq">
+    <section className="bg-gray-100 text-black " id="faq">
       <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
         <div className="flex flex-col text-left basis-1/2">
-          <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
-          <p className="sm:text-4xl text-3xl font-extrabold text-base-content">
+          <p className="inline-block font-semibold mb-4 text-custom-blue">
+            FAQ
+          </p>
+          <p className="sm:text-4xl text-3xl font-extrabold ">
             Frequently Asked Questions
           </p>
         </div>

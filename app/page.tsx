@@ -18,8 +18,8 @@ export default function Home() {
         <Hero />
         <Problem />
         <FeaturesAccordion />
-        <FAQ />
         <CTA />
+        <FAQ />
       </main>
       <Footer />
     </>

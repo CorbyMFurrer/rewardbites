@@ -13,13 +13,10 @@ const links: {
   href: string;
   label: string;
 }[] = [
+  { href: "/#features", label: "Features" },
   {
-    href: "/#pricing",
-    label: "Pricing",
-  },
-  {
-    href: "/#testimonials",
-    label: "Reviews",
+    href: "/blog",
+    label: "Blog",
   },
   {
     href: "/#faq",

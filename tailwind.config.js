@@ -26,7 +26,7 @@ module.exports = {
         wiggle: "wiggle 1.5s ease-in-out infinite",
         popup: "popup 0.25s ease-in-out",
         shimmer: "shimmer 3s ease-out infinite alternate",
-        "infinite-scroll": "infinite-scroll 120s linear infinite",
+        "infinite-scroll": "infinite-scroll 200s linear infinite",
       },
       keyframes: {
         blob: {

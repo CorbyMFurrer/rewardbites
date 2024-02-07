@@ -2,6 +2,9 @@ import harvard from "app/logo-harvard.png";
 import stride from "app/stride-logo.png";
 import mdia from "app/mdia-logo.png";
 import canutillo from "app/canutillo-isd.png";
+import irving from "app/irving-logo.png";
+import ers from "app/ers-logo.png";
+import dallas from "app/dallas-logo.png";
 import Image from "next/image";
 
 const Arrow = ({ extraStyle }: { extraStyle: string }) => {
@@ -50,15 +53,14 @@ const Problem = () => {
     <section className="bg-neutral text-neutral-content relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 py-16 md:py-32 text-center">
         <h2 className="max-w-3xl mx-auto font-extrabold text-6xl md:text-4xl tracking-tight mb-6 md:mb-8">
-          AI should be helpful, not complicated.
+          Transform Your District With AI
         </h2>
         <p className="max-w-xl mx-auto text-sm opacity-90 leading-relaxed mb-12 md:mb-20">
-          We brought together experts who have helped districts, top
-          institutions, and national governments learn about AI and build policy
-          to make it simple for you.
+          Our team of AI experts has delivered tranformational AI education and
+          strategy to institutions across the country and abroad.
         </p>
 
-        <div className="animate-infinite-scroll flex">
+        <div className="animate-infinite-scroll flex py-20">
           <div className="animate-infinite-scroll flex space-x-40">
             <Image
               src={harvard}
@@ -76,6 +78,9 @@ const Problem = () => {
               alt="Image 4"
               className="w-48 max-h-20 -mt-5"
             />
+            <Image src={irving} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={ers} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={dallas} alt="Image 5" className="w-48 max-h-20 -mt-5" />
             {/* Duplicate images */}
             <Image src={harvard} alt="Image 1" className="w-48 max-h-12" />
             <Image
@@ -89,6 +94,9 @@ const Problem = () => {
               alt="Image 4"
               className="w-48 max-h-20 -mt-5"
             />
+            <Image src={irving} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={ers} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={dallas} alt="Image 5" className="w-48 max-h-20 -mt-5" />
             <Image src={harvard} alt="Image 1" className="w-48 max-h-12" />
             <Image
               src={stride}
@@ -101,6 +109,9 @@ const Problem = () => {
               alt="Image 4"
               className="w-48 max-h-20 -mt-5"
             />
+            <Image src={irving} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={ers} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={dallas} alt="Image 5" className="w-48 max-h-20 -mt-5" />
             <Image src={harvard} alt="Image 1" className="w-48 max-h-12" />
             <Image
               src={stride}
@@ -113,6 +124,9 @@ const Problem = () => {
               alt="Image 4"
               className="w-48 max-h-20 -mt-5"
             />
+            <Image src={irving} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={ers} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={dallas} alt="Image 5" className="w-48 max-h-20 -mt-5" />
             <Image src={harvard} alt="Image 1" className="w-48 max-h-12" />
             <Image
               src={stride}
@@ -125,6 +139,9 @@ const Problem = () => {
               alt="Image 4"
               className="w-48 max-h-20 -mt-5"
             />
+            <Image src={irving} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={ers} alt="Image 5" className="w-48 max-h-20 -mt-5" />
+            <Image src={dallas} alt="Image 5" className="w-48 max-h-20 -mt-5" />
           </div>
         </div>
       </div>
