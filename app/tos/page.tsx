@@ -59,21 +59,20 @@ const TOS = () => {
         >
           {`Last Updated: September 26, 2023
 
-Welcome to ShipFast!
+Welcome to AiForDistricts!
 
-These Terms of Service ("Terms") govern your use of the ShipFast website at https://shipfa.st ("Website") and the services provided by ShipFast. By using our Website and services, you agree to these Terms.
+These Terms of Service ("Terms") govern your use of the AiforDistricts website at https://aifordistricts.com ("Website") and the services provided by End Game Technologies. By using our Website and services, you agree to these Terms.
 
-1. Description of ShipFast
+1. Description of AiForDistricts
 
-ShipFast is a platform that offers a JavaScript code boilerplate to assist entrepreneurs in launching their startups more efficiently.
+AiforDistricts is a proffesional development platform that hosts informational videos for district administrators and educators.
 
 2. Ownership and Usage Rights
 
-When you purchase a package from ShipFast, you gain the right to download and use the code provided for creating applications. You own the code you create but do not have the right to resell it. We offer a full refund within 7 days of purchase, as specified in our refund policy.
-
+When you purchase a package from AiForDistricts, you gain the right to access the material and leverage all learned content for your own use. All new developments developed from content learned here belongs to the respective user or their organization.
 3. User Data and Privacy
 
-We collect and store user data, including name, email, and payment information, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at https://shipfa.st/privacy-policy.
+We collect and store user data, including name, and email, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at https://aifordistricts.com/privacy-policy.
 
 4. Non-Personal Data Collection
 
@@ -81,15 +80,15 @@ We use web cookies to collect non-personal data for the purpose of improving our
 
 5. Governing Law
 
-These Terms are governed by the laws of France.
+These Terms are governed by the laws of the US.
 
 6. Updates to the Terms
 
 We may update these Terms from time to time. Users will be notified of any changes via email.
 
-For any questions or concerns regarding these Terms of Service, please contact us at marc@shipfa.st.
+For any questions or concerns regarding these Terms of Service, please contact us at kelli.furrer@endgametechnologies.com.
 
-Thank you for using ShipFast!`}
+Thank you for using AiForDistricts!`}
         </pre>
       </div>
     </main>

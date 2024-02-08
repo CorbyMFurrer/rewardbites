@@ -3,7 +3,7 @@ import { ConfigProps } from "./types/config";
 
 const config = {
   // REQUIRED
-  appName: "AI For Districts",
+  appName: "Thinkasuarus",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
     "The go-to platform for teaching k12 stakeholders about AI and machine learning",
