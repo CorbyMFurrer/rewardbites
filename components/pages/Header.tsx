@@ -15,7 +15,7 @@ const links: {
 }[] = [
   { href: "/#features", label: "Features" },
   {
-    href: "/blog",
+    href: "/",
     label: "Blog",
   },
   {
