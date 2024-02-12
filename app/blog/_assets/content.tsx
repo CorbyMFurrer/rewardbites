@@ -1,7 +1,11 @@
 import type { JSX } from "react";
 import Image, { StaticImageData } from "next/image";
-import marcImg from "@/app/blog/_assets/images/authors/marc.png";
-import introducingSupabaseImg from "@/public/blog/introducing-supabase/header.png";
+import marcImg from "@/app/blog/_assets/images/authors/corby-headshot.png";
+import introducingSupabaseImg from "@/public/blog/introducing-supabase/openai-logo.jpg";
+import step1 from "@/public/blog/introducing-supabase/step1.png";
+import step2 from "@/public/blog/introducing-supabase/step2.png";
+import step4 from "@/public/blog/introducing-supabase/step4.png";
+import step3 from "@/public/blog/introducing-supabase/step3.png";
 
 // ==================================================================================================================================================================
 // BLOG CATEGORIES 🏷️
@@ -133,12 +137,12 @@ export const authors: authorType[] = [
     // The slug to use in the URL, from the authorSlugs object above.
     slug: authorSlugs.marc,
     // The name to display in the author's bio. Up to 60 characters.
-    name: "Marc Lou",
+    name: "Corby Furrer",
     // The job to display in the author's bio. Up to 60 characters.
-    job: "Maker of ByeDispute",
+    job: "Head of AI",
     // The description of the author to display in the author's bio. Up to 160 characters.
     description:
-      "Marc is a developer and an entrepreneur. He's built 20 startups in the last 3 years. 6 were profitable and 3 were acquired. He's currently building ByeDispute, the #1 Stripe Chargebacks Protection tool.",
+      "Corby is an AI economist, developer, and entrepreneur. In his last venture, Corby realized that for AI to enter the education ecosystem, stakeholders need to be able to trust and understand AI in a digestable manner. He is now working on Thinkasaurus Learning to bridge the AI knowledge gap.",
     // The avatar of the author to display in the author's bio and avatar badge. It's better to use a local image, but you can also use an external image (https://...)
     avatar: marcImg,
     // A list of social links to display in the author's bio.
@@ -146,17 +150,17 @@ export const authors: authorType[] = [
       {
         name: socialIcons.twitter.name,
         icon: socialIcons.twitter.svg,
-        url: "https://twitter.com/marc_louvion",
+        url: "https://twitter.com/",
       },
       {
         name: socialIcons.linkedin.name,
         icon: socialIcons.linkedin.svg,
-        url: "https://www.linkedin.com/in/marclouvion/",
+        url: "https://www.linkedin.com/in/corby-furrer/",
       },
       {
         name: socialIcons.github.name,
         icon: socialIcons.github.svg,
-        url: "https://github.com/Marc-Lou-Org/ship-fast",
+        url: "https://github.com/",
       },
     ],
   },
@@ -202,13 +206,13 @@ export const articles: articleType[] = [
     // The unique slug to use in the URL. It's also used to generate the canonical URL.
     slug: "introducing-supabase",
     // The title to display in the article page (h1). Less than 60 characters. It's also used to generate the meta title.
-    title: "Introducing Supabase to ShipFast",
+    title: "How to Protect Student Data While Using Chat GPT",
     // The description of the article to display in the article page. Up to 160 characters. It's also used to generate the meta description.
     description:
-      "Supabase is an open-source Firebase alternative. It's a great tool for building a backend for your app. It's now integrated with ShipFast!",
+      "Chat GPT is a powerful tool for education. How can you ensure student data is protected while using it? In this tutorial, I uncover the easiest way to keep student data safe while using AI. ",
     // An array of categories of the article. It's used to generate the category badges, the category filter, and more.
     categories: [
-      categories.find((category) => category.slug === categorySlugs.feature),
+      categories.find((category) => category.slug === categorySlugs.tutorial),
     ],
     // The author of the article. It's used to generate a link to the author's bio page.
     author: authors.find((author) => author.slug === authorSlugs.marc),
@@ -236,53 +240,77 @@ export const articles: articleType[] = [
         <section>
           <h2 className={styles.h2}>Introduction</h2>
           <p className={styles.p}>
-            Supabase is an open-source Firebase alternative. It&apos;s a great
-            tool for building a backend for your app. It&apos;s now integrated
-            with ShipFast!
+            Chat GPT is a powerful tool for educators. It can write emails,
+            change the reading level of texts without losing content, help
+            teachers lesson plan, and more. However, GPT was not constructed
+            with student data privacy in mind. In this tutorial, I will show you
+            how to ensure that AI models don't learn from student data while you
+            use it.
           </p>
         </section>
 
         <section>
-          <h3 className={styles.h3}>1. Create a supabase account</h3>
+          <h3 className={styles.h3}>1. Why Can&apos;t I Use GPT as is?</h3>
           <p className={styles.p}>
-            First, go to{" "}
-            <a href="https://supabase.com/" className="link link-primary">
-              Supabase
-            </a>{" "}
-            and create an account. It&apos;s free for up to 10,000 rows per
-            table.
+            There is an old saying in software: "if the product is free, then
+            you are the product." This is true for OpenAI's chat GPT too. While
+            OpenAI's GPT-3 and GPT-3.5 Turbo are fantastic free tools, they are
+            free because OpenAI is training the models and making them better
+            based on your data. This is not a secret, nor do they have malicious
+            intent, but it is important that educators are aware of this since
+            it has several implecations on usage in EDU enviornments.
             <br />
-            Then create a new project and a new table. You can use the following
-            SQL schema:
+            Before we go any further, let&apos;s define what it means for an AI
+            system to "Learn From Your Usage"
           </p>
 
           <pre className={styles.code}>
             <code>
-              {`CREATE TABLE public.users (
-  id bigint NOT NULL DEFAULT nextval('users_id_seq'::regclass),
-  email text NOT NULL,
-  password text NOT NULL,
-  created_at timestamp with time zone NOT NULL DEFAULT now(),
-  updated_at timestamp with time zone NOT NULL DEFAULT now(),
-  CONSTRAINT users_pkey PRIMARY KEY (id)
-);`}
+              {`AI learning refers to the process by which artificial intelligence systems 
+              improve their performance on a specific task over time through the acquisition, 
+              processing, and application of knowledge. 
+
+              This process involves algorithms analyzing data, identifying patterns, 
+              and making decisions or predictions, with the aim of minimizing errors and 
+              enhancing accuracy without being explicitly programmed for every scenario.`}
             </code>
           </pre>
+          <p className={styles.p}>
+            Notice how it states that performance improves through the
+            "acquisition, processing, and application of knowledge." We do not
+            want OpenAI acquiring, processing, and applying knowledge from
+            student data. If OpenAI's models train on student data, it could
+            resurface to other users when they are using the same model. Since
+            most of the world uses Chat GPT, that would mean the whole world
+            could potentially access your student's data on accident.
+          </p>
         </section>
 
         <section>
-          <h3 className={styles.h3}>2. Add your credentials to ShipFast</h3>
+          <h3 className={styles.h3}>2. How to Turn off Learning in GPT</h3>
           <p className={styles.p}>
-            Copy the <span className={styles.codeInline}>API URL</span> and{" "}
-            <span className={styles.codeInline}>API Key</span> from your
-            Supabase project settings and add them to your ShipFast project
-            settings. Add these files to your project:
+            Go into your GPT chat window.
+            <div style={{ margin: "10px 0" }}>
+              <Image src={step1} alt="Step 1" style={{ borderRadius: "5px" }} />
+            </div>
+            Locate your profile in the bottom left corner.
+            <div style={{ margin: "10px 0" }}>
+              <Image src={step2} alt="Step 2" style={{ borderRadius: "5px" }} />
+            </div>
+            Select "Settings and Beta"
+            <div style={{ margin: "10px 0" }}>
+              <Image src={step3} alt="Step 3" style={{ borderRadius: "5px" }} />
+            </div>
+            Select Data Control and toggle off "Chat History and Training"
+            <div style={{ margin: "10px 0" }}>
+              <Image src={step4} alt="Step 4" style={{ borderRadius: "5px" }} />
+            </div>
+            <span className={styles.codeInline}>
+              when you are finished, you will see a box in the upper left hand
+              corner of your screen with a power button. This means that you
+              have successfully disabled learning. Your data is now safe!
+            </span>
           </p>
-
-          <ul className={styles.ul}>
-            <li className={styles.li}>.env.local</li>
-            <li className={styles.li}>.env.production</li>
-          </ul>
         </section>
       </>
     ),
