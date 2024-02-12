@@ -282,7 +282,7 @@ export const articles: articleType[] = [
             from student data. If OpenAI&apos;s models train on student data, it
             could resurface to other users when they are using the same model.
             Since most of the world uses Chat GPT, that would mean the whole
-            world could potentially access your student's data on accident.
+            world could potentially access your student&apos;s data on accident.
           </p>
         </section>
 
