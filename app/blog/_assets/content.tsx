@@ -252,16 +252,17 @@ export const articles: articleType[] = [
         <section>
           <h3 className={styles.h3}>1. Why Can&apos;t I Use GPT as is?</h3>
           <p className={styles.p}>
-            There is an old saying in software: "if the product is free, then
-            you are the product." This is true for OpenAI's chat GPT too. While
-            OpenAI's GPT-3 and GPT-3.5 Turbo are fantastic free tools, they are
-            free because OpenAI is training the models and making them better
-            based on your data. This is not a secret, nor do they have malicious
-            intent, but it is important that educators are aware of this since
-            it has several implecations on usage in EDU enviornments.
+            There is an old saying in software: &quote;if the product is free,
+            then you are the product.&quote; This is true for OpenAI's chat GPT
+            too. While OpenAI's GPT-3 and GPT-3.5 Turbo are fantastic free
+            tools, they are free because OpenAI is training the models and
+            making them better based on your data. This is not a secret, nor do
+            they have malicious intent, but it is important that educators are
+            aware of this since it has several implecations on usage in EDU
+            enviornments.
             <br />
             Before we go any further, let&apos;s define what it means for an AI
-            system to "Learn From Your Usage"
+            system to &quote;Learn From Your Usage&quote;.
           </p>
 
           <pre className={styles.code}>
@@ -277,12 +278,12 @@ export const articles: articleType[] = [
           </pre>
           <p className={styles.p}>
             Notice how it states that performance improves through the
-            "acquisition, processing, and application of knowledge." We do not
-            want OpenAI acquiring, processing, and applying knowledge from
-            student data. If OpenAI's models train on student data, it could
-            resurface to other users when they are using the same model. Since
-            most of the world uses Chat GPT, that would mean the whole world
-            could potentially access your student's data on accident.
+            &quote;acquisition, processing, and application of knowledge.&quote;
+            We do not want OpenAI acquiring, processing, and applying knowledge
+            from student data. If OpenAI's models train on student data, it
+            could resurface to other users when they are using the same model.
+            Since most of the world uses Chat GPT, that would mean the whole
+            world could potentially access your student's data on accident.
           </p>
         </section>
 
@@ -297,11 +298,12 @@ export const articles: articleType[] = [
             <div style={{ margin: "10px 0" }}>
               <Image src={step2} alt="Step 2" style={{ borderRadius: "5px" }} />
             </div>
-            Select "Settings and Beta"
+            Select &quote;Settings and Beta&quote;
             <div style={{ margin: "10px 0" }}>
               <Image src={step3} alt="Step 3" style={{ borderRadius: "5px" }} />
             </div>
-            Select Data Control and toggle off "Chat History and Training"
+            Select Data Control and toggle off &quote;Chat History and
+            Training&quote;
             <div style={{ margin: "10px 0" }}>
               <Image src={step4} alt="Step 4" style={{ borderRadius: "5px" }} />
             </div>
