@@ -244,8 +244,8 @@ export const articles: articleType[] = [
             change the reading level of texts without losing content, help
             teachers lesson plan, and more. However, GPT was not constructed
             with student data privacy in mind. In this tutorial, I will show you
-            how to ensure that AI models don't learn from student data while you
-            use it.
+            how to ensure that AI models don&apos;t learn from student data
+            while you use it.
           </p>
         </section>
 
@@ -253,13 +253,12 @@ export const articles: articleType[] = [
           <h3 className={styles.h3}>1. Why Can&apos;t I Use GPT as is?</h3>
           <p className={styles.p}>
             There is an old saying in software: &quote;if the product is free,
-            then you are the product.&quote; This is true for OpenAI's chat GPT
-            too. While OpenAI's GPT-3 and GPT-3.5 Turbo are fantastic free
-            tools, they are free because OpenAI is training the models and
-            making them better based on your data. This is not a secret, nor do
-            they have malicious intent, but it is important that educators are
-            aware of this since it has several implecations on usage in EDU
-            enviornments.
+            then you are the product.&quote; This is true for OpenAI&apos;s chat
+            GPT too. While OpenAI&apos;s GPT-3 and GPT-3.5 Turbo are fantastic
+            free tools, they are free because OpenAI is training the models on
+            your data. This is not a secret, nor is it done with malicious
+            intent, but it does affect the way educators should use it in a
+            school enviornment.
             <br />
             Before we go any further, let&apos;s define what it means for an AI
             system to &quote;Learn From Your Usage&quote;.
