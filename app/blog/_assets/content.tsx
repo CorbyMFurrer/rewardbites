@@ -280,7 +280,7 @@ export const articles: articleType[] = [
             Notice how it states that performance improves through the
             &quote;acquisition, processing, and application of knowledge.&quote;
             We do not want OpenAI acquiring, processing, and applying knowledge
-            from student data. If OpenAI's models train on student data, it
+            from student data. If OpenAI&apos;s models train on student data, it
             could resurface to other users when they are using the same model.
             Since most of the world uses Chat GPT, that would mean the whole
             world could potentially access your student's data on accident.
