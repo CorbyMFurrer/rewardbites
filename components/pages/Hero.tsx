@@ -1,5 +1,4 @@
 import Image from "next/image";
-import TestimonialsAvatars from "../TestimonialsAvatars";
 import brain from "@/app/brain.png";
 import config from "@/config";
 
