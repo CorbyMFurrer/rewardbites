@@ -13,15 +13,15 @@ const links: {
   href: string;
   label: string;
 }[] = [
-  { href: "/#features", label: "Features" },
-  {
-    href: "/blog",
-    label: "Blog",
-  },
-  {
-    href: "/#faq",
-    label: "FAQ",
-  },
+  //{ href: "/#features", label: "Features" },
+  //{
+  //  href: "/blog",
+  // label: "Blog",
+  // },
+  // {
+  //  href: "/#faq",
+  //   label: "FAQ",
+  //},
 ];
 
 const cta: JSX.Element = <ButtonSignin extraStyle="btn-primary" />;
@@ -46,7 +46,7 @@ const Header = () => {
         {/* Your logo/name on large screens */}
         <div className="flex lg:flex-1">
           <Link
-            className="flex items-center gap-2 shrink-0 "
+            className="flex items-center gap-0 shrink-0 "
             href="/"
             title={`${config.appName} homepage`}
           >
@@ -60,7 +60,7 @@ const Header = () => {
               height={32}
             />
             {/* gradient text super cool bg-gradient-to-r from-custom-pink via-custom-purple to-custom-blue inline-block text-transparent bg-clip-text*/}
-            <span className="font-extrabold text-lg text-gray-400">
+            <span className="font-extrabold text-lg text-white">
               {config.appName}
             </span>
           </Link>
@@ -91,7 +91,7 @@ const Header = () => {
         </div>
 
         {/* Your links on large screens */}
-        <div className="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center text-gray-400">
+        <div className="hidden lg:flex lg:justify-center lg:gap-12 lg:items-center text-white">
           {links.map((link) => (
             <Link
               href={link.href}

@@ -10,7 +10,7 @@ import config from "@/config";
 // It automatically redirects user to callbackUrl (config.auth.callbackUrl) after login, which is normally a private page for users to manage their accounts.
 // If the user is already logged in, it will show their profile picture & redirect them to callbackUrl immediately.
 const ButtonSignin = ({
-  text = "Get started",
+  text = "Log In",
   extraStyle,
 }: {
   text?: string;
@@ -33,8 +33,8 @@ const ButtonSignin = ({
     return (
       <Link
         href={config.auth.callbackUrl}
-        style={{ backgroundColor: "#1cdaff" }}
-        className={`btn ${extraStyle ? extraStyle : ""}`}
+        style={{ backgroundColor: "#000000" }}
+        className={`btn ${extraStyle ? extraStyle : ""}text-white`}
       >
         {user?.user_metadata?.avatar_url ? (
           <img
@@ -57,8 +57,8 @@ const ButtonSignin = ({
 
   return (
     <Link
-      className={`btn ${extraStyle ? extraStyle : ""} text-black`}
-      style={{ backgroundColor: "#1cdaff" }}
+      className={`btn ${extraStyle ? extraStyle : ""} text-white border-black`}
+      style={{ backgroundColor: "#000000" }}
       href={config.auth.loginUrl}
     >
       {text}

@@ -39,13 +39,15 @@ const ButtonLead = ({ extraStyle }: { extraStyle?: string }) => {
       onSubmit={handleSubmit}
     >
       <input
+        border-color="black"
         required
         type="email"
         value={email}
         ref={inputRef}
         autoComplete="email"
         placeholder="tom@cruise.com"
-        className="input input-bordered w-full placeholder:opacity-60"
+        className="input input-bordered w-full placeholder:opacity-60 focus:outline-none"
+        style={{ outline: "none" }} // Inline style to ensure it takes precedence
         onChange={(e) => setEmail(e.target.value)}
       />
 

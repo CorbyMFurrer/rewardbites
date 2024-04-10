@@ -59,20 +59,20 @@ const TOS = () => {
         >
           {`Last Updated: September 26, 2023
 
-Welcome to AiForDistricts!
+Welcome to Praxis Legal!
 
-These Terms of Service ("Terms") govern your use of the AiforDistricts website at https://aifordistricts.com ("Website") and the services provided by End Game Technologies. By using our Website and services, you agree to these Terms.
+These Terms of Service ("Terms") govern your use of the Praxis website at https://praxislegal.ai ("Website") and the services provided by Praxis Legal, Inc. By using our Website and services, you agree to these Terms.
 
-1. Description of AiForDistricts
+1. Description of Praxis Legal
 
-AiforDistricts is a proffesional development platform that hosts informational videos for district administrators and educators.
+Praxis Legal is a legal tech company that empowering legal firms through a variety of process efficiencies driven by cutting-edge technologies and AI.
 
 2. Ownership and Usage Rights
 
-When you purchase a package from AiForDistricts, you gain the right to access the material and leverage all learned content for your own use. All new developments developed from content learned here belongs to the respective user or their organization.
+When you purchase a package from Praxis Legal, you gain the right to access and leverage all efficiencies for your own use on a per-license basis. All new content developed through Praxis Legal belongs to the liscenser. 
 3. User Data and Privacy
 
-We collect and store user data, including name, and email, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at https://aifordistricts.com/privacy-policy.
+We collect and store user data, including name, and email, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at https://praxislegal.ai/privacy-policy.
 
 4. Non-Personal Data Collection
 
@@ -80,15 +80,15 @@ We use web cookies to collect non-personal data for the purpose of improving our
 
 5. Governing Law
 
-These Terms are governed by the laws of the US.
+These Terms are governed by the laws of Delaware.
 
 6. Updates to the Terms
 
 We may update these Terms from time to time. Users will be notified of any changes via email.
 
-For any questions or concerns regarding these Terms of Service, please contact us at kelli.furrer@endgametechnologies.com.
+For any questions or concerns regarding these Terms of Service, please contact us at support@praxislegal.ai.
 
-Thank you for using AiForDistricts!`}
+Thank you for choosing us as your service provider!`}
         </pre>
       </div>
     </main>

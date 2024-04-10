@@ -16,10 +16,6 @@ export default function Home() {
       </Suspense>
       <main>
         <Hero />
-        <Problem />
-        <FeaturesAccordion />
-        <CTA />
-        <FAQ />
       </main>
       <Footer />
     </>
