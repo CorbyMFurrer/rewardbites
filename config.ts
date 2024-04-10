@@ -3,9 +3,9 @@ import { ConfigProps } from "./types/config";
 
 const config = {
   // REQUIRED
-  appName: "Praxis Legal",
+  appName: "Praxis",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
-  appDescription: "Empowering scale with cutting-edge legal technology.",
+  appDescription: "Empowering scale with cutting-edge augmentation",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "praxislegal.ai",
   crisp: {

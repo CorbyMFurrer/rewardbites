@@ -60,7 +60,7 @@ const Header = () => {
               height={32}
             />
             {/* gradient text super cool bg-gradient-to-r from-custom-pink via-custom-purple to-custom-blue inline-block text-transparent bg-clip-text*/}
-            <span className="font-extrabold text-lg text-white">
+            <span className="font-abold text-lg text-white">
               {config.appName}
             </span>
           </Link>
