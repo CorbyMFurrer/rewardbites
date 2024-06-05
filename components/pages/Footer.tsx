@@ -8,7 +8,7 @@ import logo from "@/app/icon3.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-500 border-t border-base-content/10">
+    <footer className="bg-gray-300 border-t border-base-content/10">
       <div className="max-w-7xl mx-auto px-8 py-10">
         <div className=" flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">

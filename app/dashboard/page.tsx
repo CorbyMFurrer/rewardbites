@@ -16,7 +16,7 @@ export default async function Dashboard() {
       <section className="max-w-xl mx-auto space-y-8">
         <ButtonAccount />
         <h1 className="text-3xl md:text-4xl font-extrabold">
-          Contact kelli.furrer@endgametechnologies for access!
+          Contact cfurrer@college.harvard.edu for access!
         </h1>
         <pre>{JSON.stringify(data, null, 2)}</pre>
       </section>
