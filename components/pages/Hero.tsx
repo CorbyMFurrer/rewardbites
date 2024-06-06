@@ -1,6 +1,7 @@
 import Image from "next/image";
 import brain from "@/app/brain.png";
 import config from "@/config";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -14,9 +15,11 @@ const Hero = () => {
         <h1 className="font-extrabold text-3xl lg:text-6xl tracking-tight md:-mb-4 text-custom-blue">
           Connecting Top Talent to the Best Banks
         </h1>
-        <button className="btn btn-custom-blue btn-wide bg-custom-blue text-white">
-          Get Started Today
-        </button>
+        <Link href="/signin">
+          <button className="btn btn-custom-blue btn-wide bg-custom-blue text-white">
+            Get Started Today
+          </button>
+        </Link>
       </div>
       <div className="lg:w-full mt-10">
         <Image

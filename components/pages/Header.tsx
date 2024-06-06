@@ -46,7 +46,7 @@ const Header = () => {
         {/* Your logo/name on large screens */}
         <div className="flex lg:flex-1">
           <Link
-            className="flex items-center gap-0 shrink-0 "
+            className="flex items-center gap-3 shrink-0 "
             href="/"
             title={`${config.appName} homepage`}
           >

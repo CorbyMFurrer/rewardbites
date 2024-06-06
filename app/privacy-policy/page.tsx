@@ -59,9 +59,9 @@ const PrivacyPolicy = () => {
         >
           {`Last Updated: 2023-08-25
 
-Thank you for visiting Praxis Legal ("we," "us,", "our", or "AFD"). This Privacy Policy outlines how we collect, use, and protect your personal and non-personal information when you use our website located at https://praxislegal.ai (the "Website").
+Thank you for visiting Cbanc Careers ("we," "us,", "our", or "AFD"). This Privacy Policy outlines how we collect, use, and protect your personal and non-personal information when you use our website located at https://cbanccareers.com (the "Website").
 
-By accessing or using the Website, you agree to the terms of this Privacy Policy. If you do not agree with the practices described in this policy, please do not use the Website.
+By accessing the Website, you agree to the terms of this Privacy Policy. If you do not agree with the practices described in this policy, please opt out of website use.
 
 1. Information We Collect
 
@@ -71,6 +71,8 @@ We collect the following personal information from you:
 
 Name: We collect your name to personalize your experience and communicate with you effectively.
 Email: We collect your email address to send you important information regarding your orders, updates, and communication.
+Resume: We collect resumes in partnership with 3rd party providers to improve user experience. 
+Supplementary Data: We collect other data voluntarily given by user to enhance talent matches.
 
 
 1.2 Non-Personal Data
@@ -83,11 +85,11 @@ We collect and use your personal data for the sole purpose of order processing a
 
 3. Data Sharing
 
-We do not share your personal data with any third parties except as required for order processing (e.g., sharing your information with payment processors). We do not sell, trade, or rent your personal information to others.
+We do not share your personal data with any third parties except as required to deliver the core service or for order processing (e.g., sharing your information with payment processors). 
 
 4. Children's Privacy
 
-Praxis Legal is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us at the email address provided below.
+Cbanc Careers is not intended for people in college or younger, aiming to serve experienced banking professionals. We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us at the email address provided below.
 
 5. Updates to the Privacy Policy
 
@@ -97,11 +99,11 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 
 If you have any questions, concerns, or requests related to this Privacy Policy, you can contact us at:
 
-Email: support@praxislegal.ai
+Email: support@cbanccareers.com
 
 For all other inquiries, please visit our Contact Us page on the Website.
 
-By using Praxis, you consent to the terms of this Privacy Policy.`}
+By accessing cbanccareers, you consent to the terms of this Privacy Policy.`}
         </pre>
       </div>
     </main>

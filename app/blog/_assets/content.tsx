@@ -142,7 +142,7 @@ export const authors: authorType[] = [
     job: "Head of AI",
     // The description of the author to display in the author's bio. Up to 160 characters.
     description:
-      "Corby is an AI economist, developer, and entrepreneur. In his last venture, Corby realized that for AI to enter the education ecosystem, stakeholders need to be able to trust and understand AI in a digestable manner. He is now working on Thinkasaurus Learning to bridge the AI knowledge gap.",
+      "Corby is an AI economist, developer, and entrepreneur. In his last venture, Corby realized that for AI to enter the education ecosystem, stakeholders need to be able to trust and understand AI in a digestable manner. He is now working on to bridge the AI knowledge gap.",
     // The avatar of the author to display in the author's bio and avatar badge. It's better to use a local image, but you can also use an external image (https://...)
     avatar: marcImg,
     // A list of social links to display in the author's bio.

@@ -15,7 +15,7 @@ const Footer = () => {
             <Link
               href="/#"
               aria-current="page"
-              className="flex gap-0 justify-center md:justify-start items-center"
+              className="flex gap-3 justify-center md:justify-start items-center"
             >
               <Image
                 src={logo}
@@ -26,7 +26,7 @@ const Footer = () => {
                 height={24}
               />
               <strong className="font-bold tracking-tight text-base-content md:text-lg">
-                {config.appName} Legal, 2024
+                {config.appName}, 2024
               </strong>
             </Link>
 

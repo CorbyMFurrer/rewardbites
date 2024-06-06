@@ -61,18 +61,18 @@ const TOS = () => {
 
 Welcome to Praxis Legal!
 
-These Terms of Service ("Terms") govern your use of the Praxis website at https://praxislegal.ai ("Website") and the services provided by Praxis Legal, Inc. By using our Website and services, you agree to these Terms.
+These Terms of Service ("Terms") govern your use of the Praxis website at https://cbanccareers.com ("Website") and the services provided by Cbanc, Inc. By using our Website and services, you agree to these Terms.
 
-1. Description of Praxis Legal
+1. Description of CBanc Careers
 
-Praxis Legal is a legal tech company that empowering legal firms through a variety of process efficiencies driven by cutting-edge technologies and AI.
+Cbanc Careers provides financial institutions technology with access to talent via a users' resume, empowering banks to find better matches.
 
 2. Ownership and Usage Rights
 
-When you purchase a package from Praxis Legal, you gain the right to access and leverage all efficiencies for your own use on a per-license basis. All new content developed through Praxis Legal belongs to the liscenser. 
+When you purchase a package from CBanc, you gain the right to access and leverage efficiencies for your own use on a per-license basis. All new content developed through Cbanc Careers belongs to the liscenser. 
 3. User Data and Privacy
 
-We collect and store user data, including name, and email, as necessary to provide our services. For details on how we handle your data, please refer to our Privacy Policy at https://praxislegal.ai/privacy-policy.
+We collect and store user data, including name, email, resumes, and other supplementary material as necessary to provide our services. Some resumes have been obtained in partnership with AB recruiting solutions for benefit of the user, but can easily be opted out of use. For details on how we handle your data, please refer to our Privacy Policy at https://cbanccareers/privacy-policy.
 
 4. Non-Personal Data Collection
 
@@ -86,7 +86,7 @@ These Terms are governed by the laws of Delaware.
 
 We may update these Terms from time to time. Users will be notified of any changes via email.
 
-For any questions or concerns regarding these Terms of Service, please contact us at support@praxislegal.ai.
+For any questions or concerns regarding these Terms of Service, please contact us at support@cbanccareers.com.
 
 Thank you for choosing us as your service provider!`}
         </pre>

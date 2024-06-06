@@ -5,7 +5,8 @@ const config = {
   // REQUIRED
   appName: "CBanc Careers",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
-  appDescription: "Empowering scale with cutting-edge augmentation",
+  appDescription:
+    "Building stronger financial institutions with cutting-edge talent technology",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "cbanccareers.com",
   crisp: {
