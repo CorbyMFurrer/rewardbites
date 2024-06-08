@@ -28,7 +28,7 @@ export default function Login() {
 
     try {
       const { type, provider } = options;
-      const redirectURL = "https://praxislegal.ai" + "/api/auth/callback";
+      const redirectURL = "https://cbanccareers.com" + "/api/auth/callback";
       if (type === "oauth") {
         await supabase.auth.signInWithOAuth({
           provider,
