@@ -10,7 +10,7 @@ interface ViewRewardsProps {
 export default function ViewRewards({ selectedRestaurant }: ViewRewardsProps) {
   return (
     <section className="max-w-xl mx-auto space-y-6">
-      <Rewards selectedRestaurant={selectedRestaurant} />
+      <Rewards />
       <Balance />
     </section>
   );
