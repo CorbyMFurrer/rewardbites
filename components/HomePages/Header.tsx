@@ -24,7 +24,7 @@ const links: {
   //},
 ];
 
-const cta: JSX.Element = <ButtonSignin extraStyle="btn-custom-blue" />;
+const cta: JSX.Element = <ButtonSignin extraStyle="btn-green-700" />;
 
 // A header with a logo on the left, links in the center (like Pricing, etc...), and a CTA (like Get Started or Login) on the right.
 // The header is responsive, and on mobile, the links are hidden behind a burger button.
@@ -38,7 +38,7 @@ const Header = () => {
   }, [searchParams]);
 
   return (
-    <header className="bg-white">
+    <header className="bg-gray-100">
       <nav
         className="container flex items-center justify-between px-8 py-4 mx-auto"
         aria-label="Global"
@@ -60,7 +60,7 @@ const Header = () => {
               height={32}
             />
             {/* gradient text super cool bg-gradient-to-r from-custom-pink via-custom-purple to-custom-blue inline-block text-transparent bg-clip-text*/}
-            <span className="font-abold text-lg text-custom-blue">
+            <span className="font-abold text-lg text-green-700">
               {config.appName}
             </span>
           </Link>
@@ -79,7 +79,7 @@ const Header = () => {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6 text-custom-blue"
+              className="w-6 h-6 text-green-700"
             >
               <path
                 strokeLinecap="round"

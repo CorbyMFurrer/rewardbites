@@ -12,11 +12,11 @@ const Hero = () => {
       <div className="absolute top-80 right-57 w-48 h-48 bg-custom-blue rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
       */}
       <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start w-full lg:w-3/4 mt-10 lg:mt-20">
-        <h1 className="font-extrabold text-3xl lg:text-6xl tracking-tight md:-mb-4 text-custom-blue">
-          Connecting Top Talent to the Best Banks
+        <h1 className="font-extrabold text-3xl lg:text-6xl tracking-tight md:-mb-4 text-green-700">
+          Turn every bite into a reward!
         </h1>
         <Link href="/signin">
-          <button className="btn btn-custom-blue btn-wide bg-custom-blue text-white">
+          <button className="btn btn-custom-blue btn-wide bg-green-700 text-white">
             Get Started Today
           </button>
         </Link>

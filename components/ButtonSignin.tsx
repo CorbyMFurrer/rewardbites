@@ -36,7 +36,7 @@ const ButtonSignin = ({
         style={{ backgroundColor: "#ffffff" }}
         className={`btn ${
           extraStyle ? extraStyle : ""
-        } text-base-content border-2 border-custom-blue`}
+        } text-base-content border-2 border-green-700`}
       >
         {user?.user_metadata?.avatar_url ? (
           <img

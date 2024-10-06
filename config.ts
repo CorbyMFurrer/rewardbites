@@ -3,12 +3,11 @@ import { ConfigProps } from "./types/config";
 
 const config = {
   // REQUIRED
-  appName: "CBanc Careers",
+  appName: "Reward Bites",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
-  appDescription:
-    "Building stronger financial institutions with cutting-edge talent technology",
+  appDescription: "Better rewards without the punchcard",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "cbanccareers.com",
+  domainName: "rewardbites.xyz",
   crisp: {
     // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (mailgun.supportEmail) otherwise customer support won't work.
     id: "",
@@ -94,7 +93,7 @@ const config = {
     // REQUIRED — the path to log in users. It's use to protect private routes (like /dashboard). It's used in apiClient (/libs/api.js) upon 401 errors from our API
     loginUrl: "/signin",
     // REQUIRED — the path you want to redirect users after successfull login (i.e. /dashboard, /private). This is normally a private page for users to manage their accounts. It's used in apiClient (/libs/api.js) upon 401 errors from our API & in ButtonSignin.js
-    callbackUrl: "/onboarding",
+    callbackUrl: "/dashboard/1d60149d-8753-4b4b-9c5c-8dc9133828b9",
   },
 } as ConfigProps;
 
