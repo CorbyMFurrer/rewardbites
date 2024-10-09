@@ -187,7 +187,7 @@ const SpecialOffers: React.FC = () => {
             onClick={() => handleOfferClick(offer)}
           >
             <div className="flex items-center">
-              <FaGift className="text-yellow-400 mr-3 text-xl" />
+              <FaGift className="text-blue-400 mr-3 text-xl" />
               <div>
                 <span className="font-medium">{offer.title}</span>
                 <p className="text-sm text-gray-600">{offer.description}</p>
