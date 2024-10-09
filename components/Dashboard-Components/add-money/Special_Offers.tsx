@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { FaGift, FaCamera } from "react-icons/fa";
 import Modal from "../../Modal";
 import { createClient } from "@/libs/supabase/client";
+import ReactConfetti from "react-confetti";
 
 interface SpecialOffer {
   id: string;
@@ -15,14 +16,14 @@ interface SpecialOffer {
 const dummyOffers: SpecialOffer[] = [
   {
     id: "1",
-    title: "Share on Social Media",
-    description: "Share our app on social media and earn stars!",
+    title: "Get Vaccinated",
+    description: "Upload your flu shot card for stars!",
     stars_reward: 10,
   },
   {
     id: "2",
-    title: "Refer a Friend",
-    description: "Refer a friend and earn stars when they sign up!",
+    title: "Selfie with a friend at blacksheep",
+    description: "Take a selfie with your friend for 20 stars!",
     stars_reward: 20,
   },
   {
@@ -39,6 +40,21 @@ const SpecialOffers: React.FC = () => {
   const [selectedOffer, setSelectedOffer] = useState<SpecialOffer | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [capturedImage, setCapturedImage] = useState<string | null>(null);
+  const [newStarBalance, setNewStarBalance] = useState<number | null>(null);
+  const [earnedStars, setEarnedStars] = useState<number | null>(null);
+  const [showConfetti, setShowConfetti] = useState(false);
+  const [windowDimension, setWindowDimension] = useState({
+    width: 0,
+    height: 0,
+  });
+  const client = createClient();
+
+  useEffect(() => {
+    setWindowDimension({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  }, []);
 
   const handleOfferClick = (offer: SpecialOffer) => {
     setSelectedOffer(offer);
@@ -53,6 +69,7 @@ const SpecialOffers: React.FC = () => {
       }
     } catch (error) {
       console.error("Error accessing camera:", error);
+      alert("Unable to access camera. Please check permissions.");
     }
   };
 
@@ -73,40 +90,93 @@ const SpecialOffers: React.FC = () => {
     if (videoRef.current && videoRef.current.srcObject) {
       const stream = videoRef.current.srcObject as MediaStream;
       stream.getTracks().forEach((track) => track.stop());
+      videoRef.current.srcObject = null;
     }
   };
 
   const handleUpload = async () => {
-    // Here you would implement the logic to upload the image
     console.log("Uploading image:", capturedImage);
-    // After successful upload, you could update the user's rewards
-    const client = createClient();
+
     const {
       data: { user },
+      error: userError,
     } = await client.auth.getUser();
-    if (user) {
-      const { error } = await client
-        .from("profiles")
-        .update({
-          star_balance: client.rpc("increment", {
-            x: selectedOffer?.stars_reward as number,
-          }),
-        })
-        .eq("id", user.id);
-      if (error) {
-        console.error("Error updating star balance:", error);
-      } else {
-        alert(
-          `Congratulations! You've earned ${selectedOffer?.stars_reward} stars!`
-        );
-      }
+
+    if (userError) {
+      console.error("Error fetching user:", userError);
+      alert("Error fetching user. Please try again.");
+      return;
     }
-    setIsModalOpen(false);
-    setCapturedImage(null);
+
+    if (user) {
+      console.log("User found:", user);
+
+      const starsToAddInt4: number = Math.min(
+        Math.floor(selectedOffer?.stars_reward || 0),
+        9999
+      );
+      console.log("Stars to add:", starsToAddInt4);
+      setEarnedStars(starsToAddInt4); // Set earned stars
+
+      try {
+        // Call the RPC function to increment the star balance
+        const { error: rpcError } = await client.rpc("increment_star_balance", {
+          user_id: user.id,
+          increment_by: starsToAddInt4,
+        });
+
+        if (rpcError) {
+          console.error("Error updating star balance via RPC:", rpcError);
+          alert("Failed to update star balance. Please try again.");
+        } else {
+          // Fetch the updated star balance
+          const { data: profileData, error: profileError } = await client
+            .from("profiles")
+            .select("star_balance")
+            .eq("id", user.id)
+            .single();
+
+          if (profileError) {
+            console.error("Error fetching updated star balance:", profileError);
+            alert(
+              "Star balance updated, but failed to retrieve the updated value."
+            );
+          } else {
+            console.log(
+              "Star balance updated successfully via RPC:",
+              profileData
+            );
+            setNewStarBalance(profileData.star_balance);
+            setIsModalOpen(false);
+            setCapturedImage(null);
+            window.location.reload(); // Refresh the whole page after upload
+          }
+        }
+      } catch (err) {
+        console.error("Unexpected error during RPC:", err);
+        alert("An unexpected error occurred. Please try again.");
+      }
+    } else {
+      console.log("No user found.");
+      alert("User not authenticated.");
+    }
   };
+
+  useEffect(() => {
+    if (newStarBalance !== null) {
+      setShowConfetti(true);
+      setTimeout(() => setShowConfetti(false), 5000); // Stop confetti after 5 seconds
+    }
+  }, [newStarBalance]);
 
   return (
     <div className="bg-white rounded-lg shadow-lg p-4 w-7/8 mx-auto mb-12">
+      {showConfetti && (
+        <ReactConfetti
+          width={windowDimension.width}
+          height={windowDimension.height}
+        />
+      )}
       <h2 className="text-2xl font-bold mb-2 text-center">Special Offers</h2>
 
       <ul className="space-y-3 overflow-y-auto max-h-40">
@@ -164,6 +234,19 @@ const SpecialOffers: React.FC = () => {
                 Retake
               </button>
             </div>
+            {newStarBalance !== null && (
+              <div className="text-center mt-4">
+                <h2 className="text-3xl font-bold text-yellow-500">
+                  <span role="img" aria-label="star">
+                    ⭐
+                  </span>{" "}
+                  You've earned {earnedStars} stars!{" "}
+                  <span role="img" aria-label="star">
+                    ⭐
+                  </span>
+                </h2>
+              </div>
+            )}
           </>
         )}
       </Modal>
