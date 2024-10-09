@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaHome, FaUser } from "react-icons/fa";
+import { FaHome, FaUser, FaQrcode } from "react-icons/fa"; // Import QR code icon
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createClient } from "@/libs/supabase/client";
@@ -53,6 +53,19 @@ const LowerNavBar: React.FC<LowerNavBarProps> = ({ restaurantId }) => {
           >
             <FaHome size={24} />
             <span className="text-sm">Home</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            href={`/dashboard/${currentRestaurantId}/qrcode`} // New QR code route
+            className={`flex flex-col items-center ${
+              pathname === `/dashboard/${currentRestaurantId}/qrcode`
+                ? "text-blue-500"
+                : "text-gray-500"
+            }`}
+          >
+            <FaQrcode size={24} /> {/* QR code icon */}
+            <span className="text-sm">Scan</span> {/* New tab label */}
           </Link>
         </li>
         <li>
