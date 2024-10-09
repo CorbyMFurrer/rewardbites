@@ -240,7 +240,7 @@ const SpecialOffers: React.FC = () => {
                   <span role="img" aria-label="star">
                     ⭐
                   </span>{" "}
-                  You've earned {earnedStars} stars!{" "}
+                  You&apos;ve earned {earnedStars} stars!{" "}
                   <span role="img" aria-label="star">
                     ⭐
                   </span>
