@@ -28,9 +28,9 @@ const dummyOffers: SpecialOffer[] = [
   },
   {
     id: "3",
-    title: "Complete a Survey",
-    description: "Complete a quick survey and earn stars!",
-    stars_reward: 5,
+    title: "Run the Boston Marathon",
+    description: "Take a picture of your medal for stars",
+    stars_reward: 100,
   },
 ];
 
