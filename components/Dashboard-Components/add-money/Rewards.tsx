@@ -37,70 +37,89 @@ const Rewards: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
+      console.log("Fetching user data...");
       const {
         data: { user },
+        error: userError,
       } = await supabase.auth.getUser();
+      if (userError) {
+        console.error("Error fetching user data:", userError);
+      }
       setUser(user);
 
-      if (user && restaurantId) {
-        const { data: clientStars } = await supabase
-          .from("client_restaurant_stars")
-          .select("stars, tier_id")
-          .eq("client_id", user.id)
-          .eq("restaurant_id", restaurantId)
-          .single();
-
-        if (clientStars) {
-          setStarBalance(clientStars.stars);
-
-          // Fetch current tier information
-          const { data: tierInfo } = await supabase
-            .from("member_tiers")
-            .select("*")
-            .eq("id", clientStars.tier_id)
-            .single();
-
-          if (tierInfo) {
-            setCurrentTier(tierInfo);
-
-            // Fetch next tier information
-            const { data: nextTierInfo } = await supabase
+      if (user) {
+        // Fetch client stars, current tier, and next tier
+        const [clientStarsResult, currentTierResult, restaurantResult] =
+          await Promise.all([
+            supabase
+              .from("profiles")
+              .select("star_balance")
+              .eq("id", user.id)
+              .single(),
+            supabase
               .from("member_tiers")
               .select("*")
               .eq("restaurant_id", restaurantId)
-              .gt("stars_threshold", tierInfo.stars_threshold)
-              .order("stars_threshold", { ascending: true })
-              .limit(1)
-              .single();
+              .order("stars_threshold", { ascending: false }),
+            supabase
+              .from("restaurants")
+              .select("name")
+              .eq("id", restaurantId)
+              .single(),
+          ]);
 
-            if (nextTierInfo) {
-              setNextTier(nextTierInfo);
-            }
-          }
+        // Handle client stars
+        if (clientStarsResult.error) {
+          console.error(
+            "Error fetching client stars:",
+            clientStarsResult.error
+          );
+        } else if (clientStarsResult.data) {
+          setStarBalance(clientStarsResult.data.star_balance);
         }
 
-        // Fetch restaurant name
-        const { data: restaurantData } = await supabase
-          .from("restaurants")
-          .select("name")
-          .eq("id", restaurantId)
-          .single();
-        if (restaurantData) {
-          setRestaurantName(restaurantData.name);
-        }
-      }
+        // Handle tiers
+        if (currentTierResult.error) {
+          console.error("Error fetching tiers:", currentTierResult.error);
+        } else if (currentTierResult.data) {
+          const tiers = currentTierResult.data;
+          const currentTier = tiers.find(
+            (tier) =>
+              tier.stars_threshold <= clientStarsResult.data.star_balance
+          );
+          const nextTier = tiers.find(
+            (tier) => tier.stars_threshold > clientStarsResult.data.star_balance
+          );
 
-      // Fetch nearest rewards
-      if (restaurantId && user) {
-        const { data: offerings } = await supabase
+          setCurrentTier(currentTier || null);
+          setNextTier(nextTier || null);
+        }
+
+        // Handle restaurant name
+        if (restaurantResult.error) {
+          console.error(
+            "Error fetching restaurant name:",
+            restaurantResult.error
+          );
+        } else if (restaurantResult.data) {
+          setRestaurantName(restaurantResult.data.name);
+        }
+
+        // Fetch nearest rewards
+        const { data: offerings, error: offeringsError } = await supabase
           .from("offerings")
           .select("id, title, description, stars_required")
           .eq("restaurant_id", restaurantId)
           .order("stars_required", { ascending: true });
 
-        if (offerings) {
+        if (offeringsError) {
+          console.error("Error fetching offerings:", offeringsError);
+        } else if (offerings) {
           const nearestOffers = offerings
-            .filter((offer) => offer.stars_required > starBalance)
+            .filter(
+              (offer) =>
+                offer.stars_required > clientStarsResult.data.star_balance
+            )
             .slice(0, 3);
           setNearestRewards(nearestOffers);
         }
@@ -141,7 +160,7 @@ const Rewards: React.FC = () => {
         Your {restaurantName} Rewards
       </h2>
 
-      <div className="flex justify-between items-center mb-6 bg-gray-100 p-4 rounded-lg">
+      <div className="flex justify-between items-center mb-6 bg-gray-00 p-4 rounded-lg">
         <div>
           <p className="text-2xl font-semibold flex items-center">
             <FaStar className="text-yellow-400 mr-2" />
